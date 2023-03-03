@@ -1,7 +1,6 @@
 import React from "react";
-import './categories.styles.scss'
-import CategoryItem from "./components/category-item/category-item";
 
+import Directory from "./components/directory/directory.component";
 
 const categories = [
   {
@@ -34,11 +33,7 @@ const categories = [
 
 const App = () => {
   return (
-    <div className="categories-container">
-      {categories.map((category)=>(
-        <CategoryItem key={category.id} category={category} />
-      ))}
-    </div>   
+       <Directory categories={categories} />
   );
 };
 
